@@ -56,47 +56,25 @@ let songsNames = [
     "2.mp3",
     "3.mp3",
     "4.mp3",
-    "5.mp3",
-    "6.mp3",
-    "7.mp3",
-    "8.mp3",
-    "9.mp3",
-    "10.mp3",
-    "11.mp3",
-    "12.mp3",
-    "13.mp3",
-    "14.mp3",
-    "15.mp3",
-    "16.mp3",
-    "17.mp3",
-    "18.mp3",
-    "19.mp3",
-    "20.mp3",
-    "21.mp3",
-    "22.mp3",
-    "23.mp3",
-    "24.mp3",
-    "25.mp3",
-    "26.mp3",
-    "27.mp3",
-    "28.mp3",
+    "5.mp3"
     ];
 
-
+console.log(songsNames.length - 5)
 function nextSong () {
-    if (songIndex >= 27) {
+    songIndex++
+
+    if (songIndex > songsNames.length-1) {
         songIndex = 0 ;
-    } else{
-        songIndex++
     };
+
     audio.src = `mp3/${songsNames[songIndex]}`;
     playSong();
     };
 function prevusSong () {
-        if (songIndex <= 1) {
-            songIndex = 27 ;
-        } else{
-            songIndex--
+    songIndex--
+
+        if (songIndex < songsNames.length - 5) {
+            songIndex = songsNames.length-1 ;
         };
         audio.src = `mp3/${songsNames[songIndex]}`;
         playSong();
