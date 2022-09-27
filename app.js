@@ -27,6 +27,8 @@ function playSong() {
     play.classList.remove("fa-play");
     play.classList.add("fa-pause");
     audio.play();
+    changeName ();
+
     console.log("play");
 }
 
@@ -44,6 +46,7 @@ play.addEventListener("click", () => {
         pauseSong();
     } else {
         playSong();
+        
     }
 });
 
@@ -52,11 +55,9 @@ play.addEventListener("click", () => {
 
 let songIndex = 0;
 let songsNames = [
-    "1.mp3",
-    "2.mp3",
-    "3.mp3",
-    "4.mp3",
-    "5.mp3"
+    "we are the brave.mp3",
+    "يا معافر.mp3",
+    "عشرة ومشوار.mp3"
     ];
 
 console.log(songsNames.length - 5)
@@ -73,7 +74,7 @@ function nextSong () {
 function prevusSong () {
     songIndex--
 
-        if (songIndex < songsNames.length - 5) {
+        if (songIndex < songsNames.length - 3) {
             songIndex = songsNames.length-1 ;
         };
         audio.src = `mp3/${songsNames[songIndex]}`;
