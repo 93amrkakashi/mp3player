@@ -8,6 +8,8 @@
 /* ------------- المتغيرات اللى هحتاجها ------------ */
 
 
+
+
 const play = document.querySelector(".play") as HTMLButtonElement;
 const next = document.querySelector(".next") as HTMLButtonElement;
 const back = document.querySelector(".back") as HTMLButtonElement;
